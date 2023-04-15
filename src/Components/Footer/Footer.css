@@ -1,0 +1,54 @@
+footer{
+    width:100%;
+    margin-top:200px;
+    min-height:300px;
+    background-color:rgb(18,108,198);
+    color:#fff;
+}
+.subscribe{
+    width:30%;
+    margin-left:35%;
+    padding-top:50px;
+  
+
+}
+.subscribe-label{
+    display:flex;
+    justify-content: center;
+    align-self:center;
+    font-weight:bold;
+    font-size:16px;
+    justify-self: center;
+}
+.subscribe-label p{
+    font-family:"Clash Display Bold";
+}
+.footer-btn{
+    display:flex;
+    justify-content: center;
+}
+.footer-btn button{
+    width:175px;
+    padding:0.5rem;
+    transition:0.5s ease;
+    border-radius:0.5rem;
+    background-color:rgb(252,214,0);
+    text-transform:uppercase;
+    font-family:"Clash Display";
+    font-weight:bold;
+    font-size:18px;
+    color:rgb(5,51,97);
+
+}
+.footer-btn button:hover{
+    transform:scale(1.1) translateX(20px);
+    cursor:pointer;
+}
+.subscribe-info{
+    margin-top:100px;
+    padding-bottom:50px;
+    display:flex;
+    justify-content: space-evenly;
+    font-family:"Clash Display Bold";
+    font-size:22px;
+}

@@ -1,0 +1,33 @@
+.prequalify-container{
+    position:absolute;
+    bottom:0;
+    top:85%;
+    width:100%;
+
+  
+}
+.prequalify-wrapper{
+    margin-left:25%;
+    width:50%;
+    background-color:white;
+    padding:1rem;
+    border-radius:1rem;
+    box-shadow: 0 24px 40px -24px #2a343d66;
+}
+.prequalify-heading{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    font-size: 31px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 39px;
+    color: rgb(5, 51, 97);
+}
+.slider-wrapper{
+    padding:50px 0px 0px 50px;
+}
+.slider-wrapper p{
+    padding-left:20px;
+    font-family:'Clash Display Regular';
+}

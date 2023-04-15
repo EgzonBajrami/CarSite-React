@@ -1,0 +1,59 @@
+.modal-title{
+    width:100%;
+    font-family:"Clash Display Bold";
+    display:flex;
+    justify-content: center;
+}
+.center-modal{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    padding:1rem;
+}
+.products-data-image1{
+    width:100%;
+}
+.products-data-image1 img{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+}
+.products-data-description{
+    font-family:"Roboto";
+    text-align:left;
+    font-size:22px;
+    padding-top:1rem;
+}
+.car-modal-btn{
+    display:flex;
+    justify-content: center;
+}
+.car-modal-btn button{
+    width:175px;
+    padding:0.5rem;
+    transition:0.5s ease;
+    border-radius:0.5rem;
+    background-color:rgb(252,214,0);
+    text-transform:uppercase;
+    font-family:"Clash Display";
+    font-weight:bold;
+    font-size:18px;
+    color:rgb(5,51,97);
+
+}
+.car-modal-btn button:hover{
+    transform:scale(1.1) translateX(20px);
+    cursor:pointer;
+}
+.form-modal-container label{
+    font-family:"Clash Display Regular";
+    font-weight:600;
+}
+.form-modal-title h2{
+    font-family:"Clash Display Regular";
+    font-weight:bold;
+    text-align:center;
+}

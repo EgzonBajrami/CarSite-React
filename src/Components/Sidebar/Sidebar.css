@@ -1,0 +1,33 @@
+.sidebar-wrapper{
+    width:15vw;
+    
+    background-color:rgb(206, 202, 202);
+}
+.sidebar-items{
+    display:flex;
+    flex-direction:column;
+    justify-self:flex-end;
+}
+.items{
+    display:flex;
+    margin-top:5%;
+  
+    margin-left:5%;
+    height: 50px;
+    width:90%;
+
+    border-radius: 10px;
+    border: 3px dashed #0f0f0f;
+    align-items:center;
+    justify-content:center;
+
+}
+.items:hover{
+    background-color:rgb(236, 230, 230);
+    border:3px dashed rgb(236,230,230);
+}
+.items p{
+    font-family:'Stencil Std', fantasy;
+    text-transform:uppercase;
+    text-align:center;
+}

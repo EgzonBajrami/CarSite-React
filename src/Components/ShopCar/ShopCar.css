@@ -1,0 +1,27 @@
+.shopcar-container{
+    width:80%;
+    margin-left:10%;
+}
+.shopcar-titles{
+    display:flex;
+    gap:100px;
+}
+.shopcar-maintitle h1{
+    font-family:"Clash Display Bold";
+    font-weight:600;
+    font-size:38px;
+}
+.shopcar-titles h3{
+    font-family:"Clash Display Bold";
+    transition:0.5s ease;
+    color:rgb(84,91,99);
+}
+.blue{
+    font-family:"Clash Display Bold";
+    color:rgb(3, 53, 103) !important;
+    border-bottom:1px solid rgb(5,51,97);
+}
+.shopcar-titles h3:hover{
+    transform:scale(1.1) translateX(20px);
+    cursor:pointer;
+}

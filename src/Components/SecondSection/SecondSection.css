@@ -1,0 +1,92 @@
+.second-section-image{
+    position:relative;
+    width:100%;
+}
+.second-section-image img{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    animation:slowlyBlur 4s forwards;
+}
+@keyframes slowlyBlur{
+    0%{
+        -webkit-filter: blur(0px); 
+        -moz-filter: blur(0px); 
+        -o-filter: blur(0px); 
+        -ms-filter: blur(0px); 
+        filter: blur(0px);
+        
+
+    }
+    100%{
+        -webkit-filter: blur(2px); 
+        -moz-filter: blur(2px); 
+        -o-filter: blur(2px); 
+        -ms-filter: blur(2px); 
+        filter: blur(2px);
+    }
+}
+.second-section-info{
+    position:absolute;
+    background-color:rgb(255, 255, 255);
+    left:10%;
+    margin-top:-45%;
+    padding:1rem;
+    width:350px;
+    border-radius:0.5rem;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.second-section-info h2{
+    padding-top:50px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 120%;
+    color:rgb(5,51,97);
+    text-align:center;
+    width:175px;
+}
+.second-section-block{
+    padding-top:30px;
+}
+.second-section-text{
+    padding-bottom:15px;
+}
+.second-section-text h3{
+    font-family:"Roboto";
+    font-style:normal;
+    font-weight:600;
+    font-size:24px;
+    text-align:left;
+}
+.second-section-text p{
+    font-family:"Clash Display Regular";
+    font-size:12px;
+    text-align:left;
+}
+.second-section-btn{
+    display:flex;
+    justify-content: center;
+}
+.second-section-btn button{
+    width:175px;
+    padding:0.5rem;
+    transition:0.5s ease;
+    border-radius:0.5rem;
+    background-color:rgb(252,214,0);
+    text-transform:uppercase;
+    font-family:"Clash Display";
+    font-weight:bold;
+    font-size:18px;
+    color:rgb(5,51,97);
+
+}
+.second-section-btn button:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}

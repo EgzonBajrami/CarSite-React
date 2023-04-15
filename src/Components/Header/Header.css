@@ -1,0 +1,81 @@
+.header-container{
+    position:absolute;
+    top:0;
+    left:10%;
+}
+.header-boxes{
+    padding:1rem;
+}
+.header-boxes p{
+    position:absolute;
+    top:20%;
+    left:10%;
+    font-family: 'Clash Display Bold';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 120%;
+    color:rgb(5,51,97);  
+    transition:.5s ease; 
+    text-transform:uppercase;
+}
+.header-boxes p:nth-of-type(2){
+    margin-left:30%;
+}
+.header-boxes p:hover{
+    transform:scale(1.1) translateX(20px);
+    cursor:pointer;
+}
+.header-box2{
+    padding:1rem;
+}
+.header-box2 p{
+    position:absolute;
+    top:20%;
+    left:230px;
+    font-family: 'Clash Display Regular';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 120%;
+    color:rgb(5,51,97);  
+    transition:.5s ease; 
+}
+.header-box2 p:hover{
+    transform:scale(1.1) translateX(20px);
+    cursor:pointer;
+}
+.header-box3{
+    padding:1rem;
+}
+.header-box3 p{
+    position:absolute;
+    top:20%;
+    left:350px;
+    font-family: 'Clash Display Regular';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 120%;
+    color:rgb(5,51,97);  
+    transition:.5s ease; 
+}
+.header-box3 p:hover{
+    transform:scale(1.1) translateX(20px);
+    cursor:pointer;
+}
+.header-box4{
+    padding:1rem;
+}
+.header-box4 p{
+    position:absolute;
+    top:20%;
+    left:550px;
+    font-family: 'Clash Display Regular';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 120%;
+    color:rgb(5,51,97);  
+    transition:.5s ease; 
+}
+.header-box4 p:hover{
+    transform:scale(1.1) translateX(20px);
+    cursor:pointer;
+}
