@@ -11,6 +11,8 @@ const LandingPage = () =>{
     const finalDiv = useRef(null);
     let finalDivClass = "testimonials";
     let divClass = 'second-section-holder';
+    let animationOne =0;
+    let animationTwo =0;
     const [divPos, setDivPos] = useState('');
     const [secondDiv, setSecondDiv] = useState('');
     const [finalDivPos, setFinalDivPos] = useState('');
@@ -49,11 +51,13 @@ const LandingPage = () =>{
 
         }
     },[finalDiv])
-    if(divPos<scrollPosition){
+    if(divPos<scrollPosition && animationOne===0){
         divClass = "scroll-div";
+        animationOne=1;
     }
-    if(finalDivPos<scrollPosition){
+    if(finalDivPos<scrollPosition && animationTwo===0){
         finalDivClass ="testimonials-bigger";
+        animationTwo=1;
     }
     return <>
     <div className="landing-page-container">
