@@ -34,7 +34,7 @@ const config = {
 }
 
 
-**This section is how I split my code so you can understand better.**
+## This section is how I split my code so you can understand better.##
 
 In pages you may find that I have 4 Pages, but here relevant is only the LandingPage and Dashboard.
 Dashboard is the protected page, while LandingPage is what the user sees.
@@ -47,6 +47,8 @@ FirstSection contains a component PreQualify which also contains another compone
 SlickCarousel uses React-Slick and the beauty of it is how easy to configure and how lightweight React-Slick is compared to everything else.
 You can set up as many slides as you like to show and scroll for users. I personally keep it at 3 and slides to scroll at one.
 For Mobile I keep it at one and for Tablet I keep it at 2. You can modify them by changing breakpoints settings and specifying which settings you want and also which breakpoint you want.
+
+## -- ##
 
 LandingPage does keep record of some important divs positions and also keeps record of when the user is scrolling.
 This here is done to be very precise about when the user is about to enter the required div position which will trigger some animations depending on where the user is currently positioned.
