@@ -1,7 +1,9 @@
 .header-container{
-    position:absolute;
-    top:0;
-    left:10%;
+    position:fixed;
+    top:5%;
+    width:100vw;
+    z-index:3;
+    overflow-y:visible !important;
 }
 .header-boxes{
     padding:1rem;
@@ -24,6 +26,134 @@
 .header-boxes p:hover{
     transform:scale(1.1) translateX(20px);
     cursor:pointer;
+}
+a{
+    transition: .5s transform ease;
+    display: block;
+    width: fit-content;
+}
+
+.hamburger{
+    cursor: pointer;
+    position: absolute;
+    top:20px;
+    right:10%;
+    z-index: 4;
+    overflow-y:visible !important;
+}
+
+.hamburger span{
+    height: 4px;
+    width: 40px;
+    background-color: white;
+    display: block;
+    margin-bottom: 8px;
+    transition: .3s transform ease;
+    
+    border-radius: 5px;
+}
+
+.hamburger span:first-child{
+    width: 40px;
+}
+
+.hamburger span:nth-child(2){
+    width: 40px; 
+}
+
+.hamburger span:last-child{
+    margin-bottom: 0;
+}
+
+.hamburger:hover span:first-child{
+    transform: translateX(-5px);
+}
+
+.hamburger:hover span:last-child{
+    transform: translateX(-5px);
+}
+
+
+.hamburger-opened:hover span:last-child{
+    transform: rotate(45deg) translateY(-3px) translateX(-2px);
+}
+
+.hamburger-opened span{
+    background-color: white;
+}
+
+.hamburger-opened span:first-child{
+    display: none;
+}
+
+.hamburger-opened span:nth-child(2){
+    width: 40px; 
+    margin: 0;
+    transform: rotate(-45deg);
+}
+
+.hamburger-opened span:last-child{
+    transform: rotate(45deg) translateY(-3px) translateX(-2px);
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.menus-container{
+    position:relative;
+    display:none;
+    z-index:-1;
+}
+.menu-overlay{
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 50vw;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: .8s opacity ease, .8s visibility ease;
+    
+    background-color:rgb(7, 79, 152);
+    color: white;
+    font-weight: bold;
+    overflow-y: hidden;
+}
+.menu-overlay ul{
+    padding:10% 100px 100px 100px;
+}
+.menu-overlay ul li{
+    font-family: 'Clash Display Regular';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 120%;
+    color:white;  
+    padding-bottom:50px;
+    transition:.5s ease; 
+
+}
+.menu-overlay ul li:hover{
+    cursor:pointer;
+    transform:scale(1.1) translateX(20px);
+    margin-left:20px;
+}
+.menu-blur{
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 50vw;
+    left: 0;
+  
+    top: 0;
+    opacity: 0;
+    transition: .8s opacity ease, .8s visibility ease;
+    backdrop-filter:blur(1px);
+    color: white;
+    font-weight: bold;
+    overflow-y: hidden;
+
 }
 .header-box2{
     padding:1rem;
@@ -78,4 +208,133 @@
 .header-box4 p:hover{
     transform:scale(1.1) translateX(20px);
     cursor:pointer;
+}
+@media screen and (max-width:768px){
+
+    .menu-overlay{
+        position: fixed;
+        z-index: -1;
+        height: 100%;
+        width: 60%;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        transition: .8s opacity ease, .8s visibility ease;
+        
+        background-color:rgb(7, 79, 152);
+        color: white;
+        font-weight: bold;
+        overflow-y: hidden;
+    }
+
+}
+@media screen and (max-width:415px){
+    .header-container{
+        position:fixed;
+        top:5%;
+        width:100vw;
+        z-index:3;
+        overflow-x:auto;
+    }
+    .header-boxes{
+        padding:1rem;
+    }
+    .header-boxes p{
+        position:absolute;
+        top:20%;
+        left:10%;
+        font-family: 'Clash Display Bold';
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 120%;
+        color:rgb(5,51,97);  
+        transition:.5s ease; 
+        text-transform:uppercase;
+    }
+    .hamburger{
+        height:100px;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 28px;
+        margin-bottom: 5px;
+    
+    }
+
+    .hamburger span:first-child {
+        width: 24px;
+    }
+
+    .hamburger span:nth-child(2) {
+        width: 23px;
+        margin-left: 5px;
+    }
+
+    .hamburger:hover span:first-child{
+        transform: none;
+    }
+    
+    .hamburger:hover span:last-child{
+        transform: none;
+    }
+
+    .hamburger-opened span:nth-child(2){
+        width: 28px; 
+    }
+
+    .hamburger-opened span:last-child{
+        transform: rotate(45deg) translateY(-5px) translateX(1px);
+    }
+
+    .hamburger-opened:hover span:last-child{
+        transform: rotate(45deg) translateY(-5px) translateX(1px);
+    }
+    .menu-overlay{
+        position: fixed;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        transition: .8s opacity ease, .8s visibility ease;
+        
+        background-color:rgb(7, 79, 152);
+        color: white;
+        font-weight: bold;
+        overflow-y: hidden;
+    }
+    .menu-overlay ul{
+        padding:100px 100px 100px 100px;
+    }
+    .menu-overlay ul li{
+        font-family: 'Clash Display Regular';
+        font-weight: bold;
+        font-size: 30px;
+
+        padding-bottom: 10px;
+        line-height: 40px;
+        color:white;  
+        transition:.5s ease; 
+    
+    }
+    .menu-blur{
+        position: fixed;
+        display:none;
+        z-index: -1;
+        height: 100%;
+        width: 50vw;
+        left: 0;
+      
+        top: 0;
+        opacity: 0;
+        transition: .8s opacity ease, .8s visibility ease;
+        backdrop-filter:blur(1px);
+        color: white;
+        font-weight: bold;
+        overflow-y: hidden;
+    
+    }
+
 }

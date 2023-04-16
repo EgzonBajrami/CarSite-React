@@ -25,3 +25,58 @@
     transform:scale(1.1) translateX(20px);
     cursor:pointer;
 }
+
+@media screen and (max-width:768px){
+    .shopcar-titles{
+        display:flex;
+        gap:30px;
+    }
+    .shopcar-maintitle h1{
+        font-family:"Clash Display Bold";
+        font-weight:600;
+        font-size:30px;
+    }
+    .shopcar-titles h3{
+        font-family:"Clash Display Bold";
+        font-size:18px;
+        transition:0.5s ease;
+        color:rgb(84,91,99);
+    }
+    .blue{
+        font-family:"Clash Display Bold";
+        color:rgb(3, 53, 103) !important;
+        border:0px;
+    }
+    .shopcar-titles h3:hover{
+        transform:scale(1.1) translateX(20px);
+        cursor:pointer;
+    }
+}
+@media screen and (max-width:415px){
+    .shopcar-titles{
+        display:grid;
+        grid-template:auto / 30% 30% 30%;
+        gap:0px;
+    }
+    .shopcar-maintitle h1{
+        font-family:"Clash Display Bold";
+        font-weight:600;
+        font-size:30px;
+    }
+    .shopcar-titles h3{
+        font-family:"Clash Display Bold";
+        font-size:18px;
+        transition:0.5s ease;
+        color:rgb(84,91,99);
+    }
+    .blue{
+        font-family:"Clash Display Bold";
+        color:rgb(3, 53, 103) !important;
+        border:0px;
+    }
+    .shopcar-titles h3:hover{
+        transform:scale(1.1) translateX(20px);
+        cursor:pointer;
+    }
+
+}

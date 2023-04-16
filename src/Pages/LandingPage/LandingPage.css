@@ -40,3 +40,89 @@
 .shopcar{
     padding-top:100px;
 }
+.testimonials{
+    margin-top:100px;
+    height:1000px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    padding-bottom:500px;
+    animation:shrinkTest 4s forwards;
+}
+@keyframes shrinkTest{
+    0%{
+        width:100%;
+        margin-left:0%;
+    }
+    100%{
+        width:80%;
+        margin-left:10%;
+    }
+}
+.testimonials-bigger{
+    margin-top:100px;
+    height:1000px;
+    width:80%;
+    margin-left:10%;
+    transition:.5s ease;
+    animation:fillTest 4s forwards;
+    
+}
+@keyframes fillTest{
+    0%{
+        width:80%;
+        margin-left:10%;
+    }
+    100%{
+        width:100%;
+        margin-left:0%;
+    }
+}
+@media screen and (max-width:415px){
+    .second-section-holder{
+        padding-top:0px;
+        margin-top:300px;
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        margin-left:0%;
+        align-items:center;
+        justify-content: center;
+        padding-bottom:500px;
+        animation:none;
+    }
+    .scroll-div{
+        padding-top:0px;
+        margin-top:300px;
+        width:100%;
+        margin-left:0%;
+        transition:.5s ease;
+        animation:none;
+    }
+    .testimonials{
+        margin-top:100px;
+        height:auto;
+        display:flex;
+        width:100%;
+        margin-left:0%;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+        padding-bottom:0px;
+        animation:none;
+    }
+    .testimonials-bigger{
+        margin-top:100px;
+        height:auto;
+        margin-left:0%;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+        padding-bottom:0px;
+        animation:none;
+    }
+
+}

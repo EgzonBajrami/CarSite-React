@@ -4,12 +4,16 @@ import SecondSection from '../../Components/SecondSection/SecondSection';
 import {useRef, useState, useEffect} from 'react';
 import ShopCar from '../../Components/ShopCar/ShopCar';
 import Footer from '../../Components/Footer/Footer';
+import Testimonials from '../../Components/Testimonials/Testimonials';
 const LandingPage = () =>{
     const divRef = useRef(null);
     const secondRef = useRef(null);
+    const finalDiv = useRef(null);
+    let finalDivClass = "testimonials";
     let divClass = 'second-section-holder';
     const [divPos, setDivPos] = useState('');
     const [secondDiv, setSecondDiv] = useState('');
+    const [finalDivPos, setFinalDivPos] = useState('');
     const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
@@ -38,17 +42,30 @@ const LandingPage = () =>{
 
         }
     },[secondDiv])
+    useEffect(()=>{
+        if(finalDiv.current){
+            const rect = secondRef.current.getBoundingClientRect();
+            setFinalDivPos(rect.top);
+
+        }
+    },[finalDiv])
     if(divPos<scrollPosition){
         divClass = "scroll-div";
     }
+    if(finalDivPos<scrollPosition){
+        finalDivClass ="testimonials-bigger";
+    }
     return <>
     <div className="landing-page-container">
-        <FirstSection getDiv={secondDiv} />
+        <FirstSection  getDiv={secondDiv} />
         <div className={divClass} ref={divRef}>
             <SecondSection />
         </div>
         <div  className="shopcar" ref={secondRef}>
             <ShopCar />
+        </div>
+        <div className={finalDivClass} ref={finalDiv}>
+            <Testimonials />
         </div>
         <Footer />
     </div>

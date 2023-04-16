@@ -1,0 +1,129 @@
+
+.full-person{
+    position:relative;
+    width:100%;
+}
+.full-person img{
+    max-width:100%;
+    max-height:100%;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
+.person-text{
+    position:absolute;
+    margin-top:-20%;
+    background-color:rgb(242,242,242);
+    padding:1rem;
+    border-radius:1rem;
+    width:25%;
+    left:5%;
+}
+.person-avatar{
+    width:157px;
+    height:157px;
+    border-radius:50%;
+}
+.person-avatar img{
+    max-width:100%;
+    max-height:100%;
+    width:157px;
+    height:157px;
+    border-radius:50%;
+    object-fit:scaled-down;
+    
+}
+.person-text2{
+    position:absolute;
+    margin-top:-20%;
+    background-color:rgb(242,242,242);
+    padding:1rem;
+    border-radius:1rem;
+    width:25%;
+    left:37.5%;
+}
+.person-text3{
+    position:absolute;
+    margin-top:-20%;
+    background-color:rgb(242,242,242);
+    padding:1rem;
+    border-radius:1rem;
+    width:25%;
+    left:70%;
+}
+.person-text-here{
+    display:flex;
+    justify-content: center;
+    font-family:'Roboto';
+    font-size:22px;
+    align-items:center;
+    padding-top:50px;
+}
+.person-text-here p{
+    text-align:left;
+}
+.person-name{
+    padding-top:20px;
+    display:flex;
+    flex-direction:column;
+
+}
+.person-name h3{
+    font-family:"Clash Display Bold";
+    color:rgb(84,91,99);
+
+}
+
+@media screen and (max-width:1024px){
+    .person-text{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:5%;
+        background-color:rgb(242,242,242);
+        padding:1rem;
+        border-radius:1rem;
+        width:90%;
+        left:5%;
+    }
+    .person-avatar{
+        width:157px;
+        height:157px;
+        border-radius:50%;
+    }
+    .person-avatar img{
+        max-width:100%;
+        max-height:100%;
+        width:157px;
+        height:157px;
+        border-radius:50%;
+        object-fit:scaled-down;
+        
+    }
+    .person-text2{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:5%;
+        background-color:rgb(242,242,242);
+        padding:1rem;
+        border-radius:1rem;
+        width:90%;
+        left:5%;
+    }
+    .person-text3{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:5%;
+        background-color:rgb(242,242,242);
+        padding:1rem;
+        border-radius:1rem;
+        width:90%;
+        left:5%;
+    }
+
+}

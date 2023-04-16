@@ -2,14 +2,23 @@ import './FirstSection.css'
 import FirstImage from '../../Assets/Images/FirstImage.jpg'
 import Header from '../Header/Header';
 import Prequalify from '../Prequalify/Prequalify';
-const FirstSection = ({getDiv}) => {
+import {useState, useRef, useEffect} from 'react';
+const FirstSection = ({ getDiv}) => {
+    const firstRef = useRef(null);
+    const [firstPos, setFirstPos] = useState('');
+    useEffect(()=>{
+        if(firstRef.current){
+            const rect = firstRef.current.getBoundingClientRect();
+            setFirstPos(rect.bottom);
 
+        }
+    },[firstRef])
     return <>
-    <div className="firstSection-container">
-        <div className="firstSection-image">
+    <div className="firstSection-container" >
+        <div className="firstSection-image" ref={firstRef}>
             <img src={FirstImage} alt="Road Trip" />
         </div>
-        <Header />
+        <Header firstRef={firstPos}/>
         
         <div className="firstSection-text">
             <h1>

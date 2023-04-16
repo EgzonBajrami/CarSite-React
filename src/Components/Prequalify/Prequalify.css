@@ -31,3 +31,42 @@
     padding-left:20px;
     font-family:'Clash Display Regular';
 }
+@media screen and (max-width:1024px){
+    .prequalify-wrapper{
+        margin-left:5%;
+        width:90%;
+        background-color:white;
+        padding:1rem;
+        border-radius:1rem;
+        box-shadow: 24px 24px 40px -24px #2a343d66;
+    } 
+}
+@media screen and (max-width:768px){
+    .prequalify-wrapper{
+        margin-left:5%;
+        width:90%;
+        background-color:white;
+        padding:1rem;
+        border-radius:1rem;
+        box-shadow: 24px 24px 40px -24px #2a343d66;
+    }
+
+}
+@media screen and (max-width:615px){
+    .prequalify-container{
+        bottom:0;
+        top:85%;
+        width:100%;
+    
+      
+    }
+    .prequalify-wrapper{
+        margin-left:5%;
+        width:90%;
+        background-color:white;
+        padding:1rem;
+        border-radius:1rem;
+        box-shadow: 24px 24px 40px -24px #2a343d66;
+    }
+
+}

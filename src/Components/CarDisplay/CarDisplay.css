@@ -53,3 +53,31 @@
     transform:scale(1.1) translateX(20px);
     cursor:pointer;
 }
+
+@media screen and (max-width:1024px){
+    .cars-container{
+        display:grid;
+        width:100%;
+        grid-template:auto / 33% 33% 33%;
+        grid-row-gap:30px;
+        grid-column-gap:30px;
+    }
+}
+@media screen and (max-width:768px){
+    .cars-container{
+        display:grid;
+        width:100%;
+        grid-template:auto / 33% 33% 33%;
+        grid-row-gap:30px;
+        grid-column-gap:30px;
+    }
+
+}
+@media screen and (max-width:615px){
+    .cars-container{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        
+    }
+}
