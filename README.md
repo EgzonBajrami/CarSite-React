@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Getting Started with Car Shop App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You will need to first of all install a couple of packages before we get started.
+First: You'll need react-slick, which is a cool Carousel package, lightweight and easy to use.
+Then you'll need to get the styles which are in its documentation.
+Second: For convenience I've installed react bootstrap and applied its styles.
 
-## Available Scripts
+Third: You'll need react-redux along with redux toolkit, which I use to store users.
 
-In the project directory, you can run:
+Fourth:You will need axios for api calls.
 
-### `npm start`
+Most important one, which is a given you'll need react-router-dom.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What I did here:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I'll document the parts that are a bit hard to read here:
 
-### `npm test`
+For starters I've used protected routes and public routes to split the content that users can see and what they can't see, which only admins can see.
+To add a page to a route, simply go to Lib then Routes folder and find RouteData there.
+To add a route to public users you can just specify the path and the component you'll be using like this:
+{
+    path:'/yourpath'
+    element:<YourElement />
+}
+And thats pretty much it for the routes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For api calls you'll neeed to go to endpoints and just specify the correct URL along with post method.
+To make an api call you'll have to import both api and endpoints from API folder and then simply use api.call(endpoints.YOURENDPOINT, config)
+Config isn't a required file but if you do need it here is how:
+const config = {
+    data:yourData,
+    params:yourParams,
+    headers:yourHeaders
+}
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**This section is how I split my code so you can understand better.**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In pages you may find that I have 4 Pages, but here relevant is only the LandingPage and Dashboard.
+Dashboard is the protected page, while LandingPage is what the user sees.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+LandingPage has 5 components that are split in multiple other components to make code easier to modify and re-use.
+The initial image is in the FirstSection along with the carousel.
 
-### `npm run eject`
+FirstSection contains a component PreQualify which also contains another component SlickCarousel
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+SlickCarousel uses React-Slick and the beauty of it is how easy to configure and how lightweight React-Slick is compared to everything else.
+You can set up as many slides as you like to show and scroll for users. I personally keep it at 3 and slides to scroll at one.
+For Mobile I keep it at one and for Tablet I keep it at 2. You can modify them by changing breakpoints settings and specifying which settings you want and also which breakpoint you want.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+LandingPage does keep record of some important divs positions and also keeps record of when the user is scrolling.
+This here is done to be very precise about when the user is about to enter the required div position which will trigger some animations depending on where the user is currently positioned.
+This is done by passing props to each component that requires it and I get the positions by **useRef** and by **getBoundingClientRect** then update the **useState** all this while being in an **useEffect**, which has a dependency array with **divRef**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Rest of it is just easy React and CSS manipulation so I won't waste your time**
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**To start the app run 'npm start'**
