@@ -107,6 +107,13 @@
 
 }
 @media screen and (max-width:1024px){
+    .second-section-image img{
+        max-width:100%;
+        max-height:100%;
+        width:auto;
+        height:auto;
+        animation:none;
+    }
     .second-section-info{
         position:relative;
         background-color:rgb(242,242,242);
@@ -122,6 +129,13 @@
     }
 }
 @media screen and (max-width:768px){
+    .second-section-image img{
+        max-width:100%;
+        max-height:100%;
+        width:auto;
+        height:auto;
+        animation:none;
+    }
     .second-section-info{
         position:relative;
         background-color:rgb(242,242,242);
@@ -137,6 +151,13 @@
     }
 }
 @media screen and (max-width:415px){
+    .second-section-image img{
+        max-width:100%;
+        max-height:100%;
+        width:auto;
+        height:auto;
+        animation:none;
+    }
     .second-section-info{
         position:relative;
         background-color:rgb(242,242,242);
