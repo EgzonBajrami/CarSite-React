@@ -71,7 +71,7 @@ const CarModal = (props) =>{
             {mailing ? (<>
             <div className="form-modal-container">
                 <div className="form-modal-title">
-                    <h2>Add more information about you, so we can schedule an appointment.</h2>
+                    <h2>Add more information about you, so we can contact you about an appointment to see the vehicle.</h2>
                 </div>
                 <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
